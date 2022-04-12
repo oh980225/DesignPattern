@@ -1,12 +1,10 @@
 package abstract_factory
 
-class Application(factory: FurnitureFactory) {
-  private val chair: Chair = factory.createChair()
-  private val table: Table = factory.createTable()
+class Application(private val factory: FurnitureFactory) {
 
   fun printMySet() {
-    chair.print()
-    table.print()
+    factory.createChair().print()
+    factory.createTable().print()
   }
 }
 
