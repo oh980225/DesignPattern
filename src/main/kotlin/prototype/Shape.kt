@@ -14,6 +14,4 @@ abstract class Shape() {
 
     return false
   }
-
-  override fun toString(): String = "x: ${x}, y: ${y}, color: ${color}"
 }
