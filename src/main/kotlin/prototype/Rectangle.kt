@@ -1,19 +1,13 @@
 package prototype
 
-class Rectangle() : Shape() {
-  var width: Int? = null
-  var height: Int? = null
-
-  constructor(target: Rectangle) : this() {
-    x = target.x
-    y = target.y
-    color = target.color
-    width = target.width
-    height = target.height
-  }
-
-
-  override fun clone(): Shape = Rectangle(this)
+class Rectangle(
+  override val x: Int,
+  override val y: Int,
+  override val color: String,
+  val width: Int,
+  val height: Int
+) : Shape() {
+  override fun clone(): Shape = Rectangle(x, y, color, width, height)
 
   override fun equals(other: Any?): Boolean {
     if (other is Rectangle) {

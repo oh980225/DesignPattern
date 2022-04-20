@@ -1,16 +1,12 @@
 package prototype
 
-class Circle() : Shape() {
-  var radius: Int? = null
-
-  constructor(target: Circle) : this() {
-    x = target.x
-    y = target.y
-    color = target.color
-    radius = target.radius
-  }
-
-  override fun clone(): Shape = Circle(this)
+class Circle(
+  override val x: Int,
+  override val y: Int,
+  override val color: String,
+  val radius: Int
+) : Shape() {
+  override fun clone(): Shape = Circle(x, y, color, radius)
 
   override fun equals(other: Any?): Boolean {
     if (other is Circle) {

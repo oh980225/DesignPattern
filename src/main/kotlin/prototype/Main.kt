@@ -4,19 +4,11 @@ fun main() {
   val tester = Tester()
 
   val shapeList = mutableListOf<Shape>()
-  val circle = Circle()
-  circle.x = 10
-  circle.y = 20
-  circle.radius = 15
-  circle.color = "red"
+
+  val circle = Circle(10, 20, "red", 15)
   shapeList.add(circle)
 
-  val rectangle = Rectangle()
-  rectangle.x = 10
-  rectangle.y = 20
-  rectangle.width = 15
-  rectangle.height = 20
-  rectangle.color = "blue"
+  val rectangle = Rectangle(10, 20, "blue", 15, 20)
   shapeList.add(rectangle)
 
   tester.compareClone(shapeList)

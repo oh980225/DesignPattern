@@ -1,9 +1,9 @@
 package prototype
 
-abstract class Shape {
-  var x: Int? = null
-  var y: Int? = null
-  var color: String? = null
+abstract class Shape() {
+  abstract val x: Int
+  abstract val y: Int
+  abstract val color: String
 
   abstract fun clone(): Shape
 
