@@ -1,16 +1,7 @@
 package prototype
 
-class ShapeComparator {
-  fun execute(shape1: Shape, shape2: Shape) {
-    println("shape1: ${shape1}")
-    println("shape2: ${shape2}")
-    println("equality: ${shape1 == shape2}")
-    println("identity: ${shape1 === shape2}")
-  }
-}
-
 fun main() {
-  val comparator = ShapeComparator()
+  val tester = Tester()
 
   val shapeList = mutableListOf<Shape>()
   val circle = Circle()
@@ -28,5 +19,5 @@ fun main() {
   rectangle.color = "blue"
   shapeList.add(rectangle)
 
-  shapeList.forEach { shape -> comparator.execute(shape, shape.clone()) }
+  tester.compareClone(shapeList)
 }
