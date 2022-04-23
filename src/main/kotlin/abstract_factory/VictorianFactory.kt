@@ -1,6 +1,6 @@
 package abstract_factory
 
-class VictorianFactory: FurnitureFactory {
+class VictorianFactory : FurnitureFactory {
   override fun createChair() = VictorianChair()
 
   override fun createTable() = VictorianTable()
